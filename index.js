@@ -10,6 +10,10 @@ app.get('/', (req, res) => {
 app.get('/users', (req, res) => {
     res.send(users)
 })
+app.post('/users', (req, res) => {
+    console.log('post spi hitting');
+    console.log(req.body);
+})
 app.listen(port, () => {
     console.log(`super you server is rummimg and port is ${port}`);
 })
